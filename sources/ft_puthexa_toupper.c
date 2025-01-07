@@ -20,11 +20,7 @@ int	ft_puthexa_toupper(unsigned int n)
 	count = 0;
 	base = "0123456789ABCDEF";
 	if (n >= 16)
-	{
 		count += ft_puthexa_toupper(n / 16);
-		count += ft_puthexa_toupper(n % 16);
-	}
-	else
-		count += ft_putchar_fd(base[n], 1);
+	count += ft_putchar_fd(base[n % 16], 1);
 	return (count);
 }

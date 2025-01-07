@@ -31,9 +31,3 @@ int	ft_putnbr_fd(int n, int fd)
 	count += ft_putchar_fd((nbr % 10) + '0', fd);
 	return (count);
 }
-/*
-int main(void)
-{
-	ft_putnbr_fd(10, 1);
-}
-*/

@@ -14,17 +14,13 @@
 
 int	ft_puthexa_tolower(unsigned int n)
 {
-	int		count;
 	char	*base;
+	int		count;
 
 	count = 0;
 	base = "0123456789abcdef";
 	if (n >= 16)
-	{
 		count += ft_puthexa_tolower(n / 16);
-		count += ft_puthexa_tolower(n % 16);
-	}
-	else
-		count += ft_putchar_fd(base[n], 1);
+	count += ft_putchar_fd(base[n % 16], 1);
 	return (count);
 }
